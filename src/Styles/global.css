@@ -1,0 +1,1168 @@
+/** NAVBAR RELATED SCSS **/
+/** GLOBAL VARIABLES **/
+@font-face {
+  font-family: "Codan";
+  src: url("../fonts/Codan-Regular.woff2") format("woff2"), url("../fonts/Codan-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Codan";
+  src: url("../fonts/Codan-Bold.woff2") format("woff2"), url("../fonts/Codan-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Codan";
+  src: url("../fonts/Codan-Light.woff2") format("woff2"), url("../fonts/Codan-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+/** ------ [ NAVBAR ] ------- **/
+nav {
+  background-color: white;
+  z-index: 9;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+nav .WRAPPER {
+  height: 100%;
+  width: 100%;
+  max-width: 3200px;
+}
+nav .content {
+  padding: 10px 8%;
+  display: flex;
+}
+nav .content .navbar-brand {
+  min-width: 100px;
+  height: 60px;
+  padding: 0;
+}
+nav .content .navbar-brand .logo-img {
+  background: url("/public/imgs/LOGO.png") center center/cover no-repeat;
+  width: 200%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .content .navbar-toggler {
+  background-color: #75743c;
+}
+nav .content .navbar-collapse {
+  gap: 10px;
+}
+@media (max-width: 970px) {
+  nav .content .navbar-collapse {
+    padding-top: 20px;
+  }
+}
+nav .content .navbar-collapse .navbar-nav {
+  font-family: "Codan", sans-serif;
+  padding: 5px 10px;
+  width: 100%;
+  text-align: center;
+  gap: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+nav .content .navbar-collapse .navbar-nav .nav-item .nav-link {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: #75743c;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+nav .content .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+  color: #97976f;
+}
+nav .content .navbar-collapse .socials {
+  padding: 5px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+nav .content .navbar-collapse .socials .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+nav .content .navbar-collapse .socials .icon.yt {
+  background: url("/public/imgs/Youtube2.png") center center/contain no-repeat;
+  width: 3rem;
+}
+nav .content .navbar-collapse .socials .icon.fb {
+  background: url("/public/imgs/facebook.svg") center center/contain no-repeat;
+}
+@media (max-width: 990px) {
+  nav .content .navbar-collapse .socials .icon {
+    opacity: 0;
+    margin-bottom: -30px;
+  }
+}
+
+/** HOMEPAGE RELATED SCSS **/
+.Hero-Section {
+  height: 70rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Hero-Section .WRAPPER {
+  height: 100%;
+  width: 100%;
+  max-width: 3200px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+}
+.Hero-Section .WRAPPER .img {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  object-fit: cover;
+  align-items: center;
+  background: url("/public/imgs/Hero-1.svg") center center/cover;
+}
+.Hero-Section .WRAPPER .img .content {
+  width: 90%;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInFromLeft 1s ease-out forwards;
+  animation-delay: 0.5s;
+  color: white;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+.Hero-Section .WRAPPER .img .content .Header-Text {
+  font-size: clamp(35px, 5vw, 60px);
+  font-weight: bold;
+  max-width: 700px;
+}
+.Hero-Section .WRAPPER .img .content .desc {
+  font-size: clamp(20px, 3vw, 24px);
+  opacity: 0.8;
+  max-width: 790px;
+}
+.Hero-Section .WRAPPER .img .content .button-section {
+  display: flex;
+  gap: 25px;
+  padding: 10px;
+}
+.Hero-Section .WRAPPER .img .content .button-section button {
+  max-width: 450px;
+  min-width: 150px;
+  background-color: #75743c;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.477);
+  border: none;
+  border-radius: 10px;
+  padding: 15px 45px;
+  font-size: clamp(17px, 2.5vw, 24px);
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.15s ease;
+}
+.Hero-Section .WRAPPER .img .content .button-section button:hover {
+  background-color: #97976f;
+}
+.Hero-Section .WRAPPER .img .content .button-section .contactUs {
+  padding-left: 70px;
+  padding-right: 70px;
+  background-color: #b6b56d;
+}
+@media (max-width: 400px) {
+  .Hero-Section .WRAPPER .img .content .button-section {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+.Service-Section {
+  margin-top: -5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Service-Section .WRAPPER {
+  height: 100%;
+  width: 100%;
+  max-width: 3200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Service-Section .WRAPPER .content {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  text-align: start;
+}
+.Service-Section .WRAPPER .content .item {
+  background-color: #c4c37a;
+  padding: 0;
+  min-height: 300px;
+  max-width: 900px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Service-Section .WRAPPER .content .item.Colored {
+  background-color: #f3f3f0;
+}
+@media (max-width: 970px) {
+  .Service-Section .WRAPPER .content .item {
+    min-height: 200px;
+  }
+}
+.Service-Section .WRAPPER .content .item .line {
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  margin-bottom: 10px;
+}
+.Service-Section .WRAPPER .content .item .line.Colored {
+  background-color: #c4c37a;
+}
+.Service-Section .WRAPPER .content .item .header {
+  padding-top: 10px;
+  padding-left: 15px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-align: start;
+  gap: 10px;
+  width: 90%;
+  color: white;
+  font-family: "Codan", sans-serif;
+  margin-bottom: 10px;
+}
+.Service-Section .WRAPPER .content .item .header.Colored {
+  color: black;
+}
+.Service-Section .WRAPPER .content .item .header .icon {
+  height: 3rem;
+  width: 3rem;
+}
+.Service-Section .WRAPPER .content .item .header .icon.ic1 {
+  object-fit: cover;
+  background: url("/public/imgs/Icon1.png") center center/cover;
+}
+.Service-Section .WRAPPER .content .item .header .icon.ic2 {
+  object-fit: cover;
+  background: url("/public/imgs/Icon2.png") center center/cover;
+}
+.Service-Section .WRAPPER .content .item .header .icon.ic3 {
+  object-fit: cover;
+  background: url("/public/imgs/Icon3.png") center center/cover;
+}
+.Service-Section .WRAPPER .content .item .header .title {
+  height: 100%;
+  width: 100%;
+  font-weight: 700;
+  font-size: clamp(23px, 2vw, 28px);
+  padding-top: 20px;
+  text-align: start;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+.Service-Section .WRAPPER .content .item .desc {
+  color: white;
+  font-family: "Codan", sans-serif;
+  padding-left: 15px;
+  width: 90%;
+  text-align: start;
+  font-size: clamp(18px, 1.5vw, 22px);
+  text-shadow: 0px 2px 15px rgba(0, 0, 0, 0.63);
+  font-weight: lighter;
+  margin-bottom: 40px;
+}
+.Service-Section .WRAPPER .content .item .desc.Colored {
+  color: black;
+  text-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.AboutUs-Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.AboutUs-Section .WRAPPER {
+  padding-top: 50px;
+  height: 100%;
+  width: 100%;
+  max-width: 3200px;
+  display: flex;
+}
+.AboutUs-Section .WRAPPER .img {
+  height: 45rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  object-fit: cover;
+  align-items: center;
+  background: url("/public/imgs/abtUs.png") center center/cover;
+}
+.AboutUs-Section .WRAPPER .content {
+  background-color: #c4c37a;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 50%;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  font-family: "Codan", sans-serif;
+  color: white;
+}
+.AboutUs-Section .WRAPPER .content .Header .header-title {
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+  font-size: clamp(30px, 5vw, 38px);
+  font-weight: 600;
+}
+.AboutUs-Section .WRAPPER .content .Header .header-sub {
+  color: black;
+  font-size: clamp(16px, 2.5vw, 22px);
+  text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.3);
+}
+.AboutUs-Section .WRAPPER .content .desc {
+  width: 80%;
+  max-width: 550px;
+  font-size: clamp(16px, 2.5vw, 22px);
+  line-height: 1.8;
+  font-weight: 400;
+  text-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
+}
+@media (max-width: 994px) {
+  .AboutUs-Section .WRAPPER {
+    flex-direction: column;
+  }
+  .AboutUs-Section .WRAPPER .img {
+    height: 20rem;
+    width: 100%;
+  }
+  .AboutUs-Section .WRAPPER .content {
+    padding-top: 40px;
+    width: 100%;
+    height: auto;
+    gap: 0px;
+  }
+}
+
+.Materials-Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Materials-Section .WRAPPER {
+  height: 100%;
+  width: 100%;
+  max-width: 3200px;
+  display: flex;
+}
+.Materials-Section .WRAPPER .img {
+  height: 45rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  object-fit: cover;
+  align-items: center;
+  background: url("/public/imgs/Materials.png") center center/cover;
+}
+.Materials-Section .WRAPPER .content {
+  padding-right: 5%;
+  padding-left: 8%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  font-family: "Codan", sans-serif;
+  color: black;
+}
+.Materials-Section .WRAPPER .content .Header {
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 850px;
+}
+.Materials-Section .WRAPPER .content .Header .header-title {
+  font-size: clamp(30px, 4vw, 38px);
+  font-weight: 600;
+}
+.Materials-Section .WRAPPER .content .Header .header-title .Colored {
+  color: #75743c;
+}
+.Materials-Section .WRAPPER .content .Header .header-sub {
+  color: black;
+  font-size: clamp(16px, 2.5vw, 22px);
+}
+.Materials-Section .WRAPPER .content .desc {
+  width: 80%;
+  max-width: 850px;
+  font-size: clamp(16px, 2.5vw, 22px);
+  line-height: 1.9;
+  font-weight: 400;
+  opacity: 0.9;
+}
+@media (max-width: 530px) {
+  .Materials-Section .WRAPPER {
+    flex-direction: column;
+  }
+  .Materials-Section .WRAPPER .img {
+    height: 20rem;
+    width: 100%;
+  }
+  .Materials-Section .WRAPPER .content {
+    padding-top: 40px;
+    width: 100%;
+    height: auto;
+    gap: 0px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.Gallery-Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: -5px;
+}
+.Gallery-Section .WRAPPER {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  height: 100%;
+  width: 100%;
+  background: url("/public/imgs/background.png") center center/cover;
+  max-width: 3200px;
+  display: flex;
+}
+.Gallery-Section .WRAPPER .content {
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+  gap: 20px;
+  font-family: "Codan", sans-serif;
+  color: black;
+}
+.Gallery-Section .WRAPPER .content .cir {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  height: 13rem;
+  width: 13rem;
+}
+@media (min-width: 2500px) {
+  .Gallery-Section .WRAPPER .content .cir {
+    opacity: 0;
+  }
+}
+@media (max-width: 1300px) {
+  .Gallery-Section .WRAPPER .content .cir {
+    opacity: 0;
+  }
+}
+.Gallery-Section .WRAPPER .content .cir.left {
+  top: 25rem;
+  left: 2rem;
+}
+.Gallery-Section .WRAPPER .content .cir.right {
+  top: 11rem;
+  right: 1.5rem;
+}
+.Gallery-Section .WRAPPER .content .cir.right2 {
+  bottom: 20rem;
+  right: 4rem;
+}
+.Gallery-Section .WRAPPER .content .cir.left2 {
+  bottom: 11rem;
+  left: 4rem;
+}
+.Gallery-Section .WRAPPER .content .Header {
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  color: white;
+}
+.Gallery-Section .WRAPPER .content .Header .header-title {
+  font-size: clamp(30px, 4vw, 38px);
+  font-weight: 600;
+}
+.Gallery-Section .WRAPPER .content .Header .header-title .Colored {
+  color: #75743c;
+}
+.Gallery-Section .WRAPPER .content .Header .header-sub {
+  color: black;
+  font-size: clamp(16px, 2.5vw, 22px);
+}
+@media (max-width: 500px) {
+  .Gallery-Section .WRAPPER .content .Header {
+    text-align: center;
+  }
+}
+.Gallery-Section .WRAPPER .content .gallery {
+  width: 100%;
+  z-index: 2;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+}
+.Gallery-Section .WRAPPER .content .gallery .img {
+  height: 40vh;
+  max-height: 40rem;
+  min-width: 100px;
+  background-color: green;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.477);
+}
+.Gallery-Section .WRAPPER .content .gallery .img.img1 {
+  background: url("/public/imgs/Gallery-1.png") center center/cover;
+}
+.Gallery-Section .WRAPPER .content .gallery .img.img2 {
+  background: url("/public/imgs/Gallery-2.png") center center/cover;
+}
+.Gallery-Section .WRAPPER .content .gallery .img.img3 {
+  background: url("/public/imgs/Gallery-3.png") center center/cover;
+}
+.Gallery-Section .WRAPPER .content .gallery .img.img4 {
+  background: url("/public/imgs/Gallery-4.png") center center/cover;
+}
+.Gallery-Section .WRAPPER .content .gallery .img.img5 {
+  background: url("/public/imgs/Gallery-5.png") center center/cover;
+}
+.Gallery-Section .WRAPPER .content .gallery .img.img6 {
+  background: url("/public/imgs/Gallery-6.png") center center/cover;
+}
+.Gallery-Section .WRAPPER .content .gallery .img.img7 {
+  background: url("/public/imgs/Gallery-7.png") center center/cover;
+}
+.Gallery-Section .WRAPPER .content .gallery .img.img8 {
+  background: url("/public/imgs/Gallery-8.png") center center/cover;
+}
+.Gallery-Section .WRAPPER .content .gallery .img.img9 {
+  background: url("/public/imgs/Gallery-9.png") center center/cover;
+}
+@media (max-width: 1200px) {
+  .Gallery-Section .WRAPPER .content .gallery {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+  .Gallery-Section .WRAPPER .content .gallery .img {
+    max-height: 30rem;
+  }
+}
+@media (max-width: 800px) {
+  .Gallery-Section .WRAPPER .content .gallery {
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
+  }
+  .Gallery-Section .WRAPPER .content .gallery .img {
+    max-height: 20rem;
+  }
+}
+@media (max-width: 500px) {
+  .Gallery-Section .WRAPPER {
+    padding-top: 50px;
+  }
+}
+
+.Process-Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 120px;
+}
+.Process-Section .WRAPPER {
+  height: 100%;
+  width: 100%;
+  padding-top: 4rem;
+  max-width: 3200px;
+  display: flex;
+}
+.Process-Section .WRAPPER .content {
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 5rem;
+  font-family: "Codan", sans-serif;
+}
+@media (max-width: 900px) {
+  .Process-Section .WRAPPER .content {
+    gap: 25px;
+  }
+}
+.Process-Section .WRAPPER .content .Header {
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  color: black;
+}
+.Process-Section .WRAPPER .content .Header .header-title {
+  font-size: clamp(30px, 4vw, 38px);
+  font-weight: 600;
+}
+.Process-Section .WRAPPER .content .Header .header-title .Colored {
+  color: #75743c;
+}
+.Process-Section .WRAPPER .content .Header .header-sub {
+  color: black;
+  font-size: clamp(16px, 2.5vw, 22px);
+}
+.Process-Section .WRAPPER .content .process {
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+.Process-Section .WRAPPER .content .process .item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  object-fit: cover;
+  gap: 25px;
+  width: 100%;
+  min-width: 200px;
+  padding-top: 15px;
+}
+.Process-Section .WRAPPER .content .process .item.pad-top {
+  padding-top: 12rem;
+}
+@media (max-width: 994px) {
+  .Process-Section .WRAPPER .content .process .item.pad-top {
+    padding-top: 15px;
+  }
+}
+.Process-Section .WRAPPER .content .process .item .img {
+  width: clamp(6rem, 15vw, 7rem);
+  height: clamp(6rem, 15vw, 7rem);
+}
+.Process-Section .WRAPPER .content .process .item .img.img1 {
+  background: url("/public/imgs/process01.png") center center/cover;
+}
+.Process-Section .WRAPPER .content .process .item .img.img2 {
+  background: url("/public/imgs/process02.png") center center/cover;
+}
+.Process-Section .WRAPPER .content .process .item .img.img3 {
+  background: url("/public/imgs/process03.png") center center/cover;
+}
+.Process-Section .WRAPPER .content .process .item .img.img4 {
+  background: url("/public/imgs/process04.png") center center/cover;
+}
+.Process-Section .WRAPPER .content .process .item .desc {
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: clamp(18px, 2.5vw, 22px);
+  width: 85%;
+  line-height: 2.8rem;
+  max-width: 300px;
+}
+@media (max-width: 900px) {
+  .Process-Section .WRAPPER .content .process .item .desc {
+    line-height: 2.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .Process-Section {
+    padding-bottom: 70px;
+  }
+}
+
+.Craftmanship-Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Craftmanship-Section .WRAPPER {
+  height: 100%;
+  width: 100%;
+  max-width: 3200px;
+  display: flex;
+}
+.Craftmanship-Section .WRAPPER .img {
+  height: 45rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  object-fit: cover;
+  align-items: center;
+  background: url("/public/imgs/Craftmanship.png") center center/cover;
+}
+.Craftmanship-Section .WRAPPER .content {
+  background-color: #c4c37a;
+  padding-right: 5%;
+  padding-left: 8%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  font-family: "Codan", sans-serif;
+  color: white;
+}
+.Craftmanship-Section .WRAPPER .content .Header {
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 850px;
+}
+.Craftmanship-Section .WRAPPER .content .Header .header-title {
+  font-size: clamp(30px, 4vw, 38px);
+  font-weight: 600;
+}
+.Craftmanship-Section .WRAPPER .content .Header .header-title .Colored {
+  color: #75743c;
+}
+.Craftmanship-Section .WRAPPER .content .Header .header-sub {
+  color: black;
+  font-size: clamp(16px, 2.5vw, 22px);
+}
+.Craftmanship-Section .WRAPPER .content .desc {
+  width: 80%;
+  max-width: 850px;
+  font-size: clamp(16px, 2.5vw, 22px);
+  line-height: 1.9;
+  font-weight: 400;
+  opacity: 0.9;
+  text-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 530px) {
+  .Craftmanship-Section .WRAPPER {
+    flex-direction: column;
+  }
+  .Craftmanship-Section .WRAPPER .img {
+    height: 20rem;
+    width: 100%;
+  }
+  .Craftmanship-Section .WRAPPER .content {
+    padding-top: 40px;
+    width: 100%;
+    height: auto;
+    gap: 0px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.Mission-Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Mission-Section .WRAPPER {
+  height: 100%;
+  width: 100%;
+  max-width: 3200px;
+  display: flex;
+}
+.Mission-Section .WRAPPER .img {
+  height: 45rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  object-fit: cover;
+  align-items: center;
+  background: url("/public/imgs/Mission.png") center center/cover;
+}
+.Mission-Section .WRAPPER .content {
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 50%;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  font-family: "Codan", sans-serif;
+  color: black;
+}
+.Mission-Section .WRAPPER .content .Header {
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 850px;
+}
+.Mission-Section .WRAPPER .content .Header .header-title {
+  font-size: clamp(30px, 4vw, 38px);
+  font-weight: 600;
+}
+.Mission-Section .WRAPPER .content .Header .header-title .Colored {
+  color: #75743c;
+}
+.Mission-Section .WRAPPER .content .Header .header-sub {
+  color: black;
+  font-size: clamp(16px, 2.5vw, 22px);
+}
+.Mission-Section .WRAPPER .content .desc {
+  width: 80%;
+  max-width: 850px;
+  font-size: clamp(16px, 2.5vw, 22px);
+  line-height: 1.9;
+  font-weight: 400;
+  opacity: 0.9;
+}
+@media (max-width: 994px) {
+  .Mission-Section .WRAPPER {
+    flex-direction: column;
+  }
+  .Mission-Section .WRAPPER .img {
+    height: 20rem;
+    width: 100%;
+  }
+  .Mission-Section .WRAPPER .content {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: auto;
+    gap: 0px;
+  }
+}
+
+.CTA-Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+.CTA-Section .WRAPPER {
+  height: 100%;
+  width: 100%;
+  max-width: 3200px;
+  display: flex;
+}
+.CTA-Section .WRAPPER .img {
+  height: 32rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  object-fit: cover;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  background: url("/public/imgs/CTA.png") center center/cover;
+  color: white;
+  font-family: "Codan", sans-serif;
+}
+.CTA-Section .WRAPPER .img .header-title {
+  font-size: clamp(50px, 5vw, 60px);
+  width: 80%;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.7);
+}
+.CTA-Section .WRAPPER .img .header-title .Colored {
+  color: #fcffb4;
+}
+.CTA-Section .WRAPPER .img .desc {
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 5px;
+  font-size: clamp(16px, 2.5vw, 22px);
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 1.7;
+  opacity: 0.9;
+  text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 600px) {
+  .CTA-Section .WRAPPER .img .desc {
+    width: 90%;
+  }
+}
+
+.ContactUs-Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+.ContactUs-Section .WRAPPER {
+  height: 100%;
+  width: 100%;
+  max-width: 3200px;
+  display: flex;
+  gap: 0.31rem;
+}
+.ContactUs-Section .WRAPPER .img {
+  height: 60rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  object-fit: cover;
+  align-items: center;
+  background: url("/public/imgs/Contact.png") center center/cover;
+}
+.ContactUs-Section .WRAPPER .content {
+  background-color: #c4c37a;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 50%;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  font-family: "Codan", sans-serif;
+  color: white;
+}
+.ContactUs-Section .WRAPPER .content .Header .header-title {
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+  font-size: clamp(30px, 5vw, 38px);
+  font-weight: 600;
+}
+.ContactUs-Section .WRAPPER .content .Header .header-sub {
+  color: black;
+  font-size: clamp(16px, 2.3vw, 22px);
+  text-shadow: 0px 1px 15px rgba(0, 0, 0, 0.2);
+}
+.ContactUs-Section .WRAPPER .content .contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Codan", sans-serif;
+  gap: 15px;
+  padding: 20px;
+  gap: 33px;
+  width: 60%;
+  max-width: 600px;
+}
+.ContactUs-Section .WRAPPER .content .contact-form .form-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.ContactUs-Section .WRAPPER .content .contact-form input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 8px;
+  border: none;
+  width: 100%;
+  color: black;
+  font-size: clamp(14px, 2vw, 17px);
+  border-radius: 5px;
+}
+.ContactUs-Section .WRAPPER .content .contact-form textarea {
+  margin-bottom: 10px;
+  width: 100%;
+  border: none;
+  height: 10rem;
+  padding-left: 8px;
+  font-size: clamp(14px, 2vw, 17px);
+  padding-top: 3px;
+  border-radius: 5px;
+}
+.ContactUs-Section .WRAPPER .content .contact-form input::placeholder,
+.ContactUs-Section .WRAPPER .content .contact-form textarea::placeholder {
+  color: #333;
+  opacity: 0.8;
+}
+.ContactUs-Section .WRAPPER .content .contact-form .btn {
+  color: white;
+  font-weight: 500;
+  padding: 10px;
+  font-size: clamp(17px, 2vw, 20px);
+  padding-left: 80px;
+  padding-right: 80px;
+  background-color: #75743c;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+.ContactUs-Section .WRAPPER .content .contact-form .btn:hover {
+  background-color: #97976f;
+}
+@media (max-width: 600px) {
+  .ContactUs-Section .WRAPPER .content .contact-form {
+    width: 100%;
+  }
+}
+@media (max-width: 994px) {
+  .ContactUs-Section .WRAPPER {
+    flex-direction: column;
+  }
+  .ContactUs-Section .WRAPPER .img {
+    height: 20rem;
+    width: 100%;
+  }
+  .ContactUs-Section .WRAPPER .content {
+    padding-top: 40px;
+    width: 100%;
+    height: auto;
+    gap: 0px;
+  }
+}
+
+/* Keyframes for animation */
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/** ------ [ HOMEPAGE ] ------- **/
+/** FOOTER RELATED SCSS **/
+/** ------ [ FOOTER ] ------- **/
+footer {
+  padding: 30px;
+  background-color: #75743c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .WRAPPER {
+  padding-top: 20px;
+  height: 100%;
+  width: 100%;
+  max-width: 3200px;
+  display: flex;
+  justify-content: center;
+}
+footer .WRAPPER .content {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+}
+footer .WRAPPER .content .section {
+  padding: 10px;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Codan", sans-serif;
+  color: white;
+}
+footer .WRAPPER .content .section.sctn1 {
+  gap: 20px;
+}
+footer .WRAPPER .content .section .logo {
+  background: url("/public/imgs/LOGO2.png") center center/cover;
+  height: 4.5rem;
+  width: 10rem;
+}
+footer .WRAPPER .content .section .socials {
+  display: flex;
+  gap: 15px;
+  padding-left: 5px;
+}
+footer .WRAPPER .content .section .socials .social {
+  height: 1.7rem;
+  width: 1.7rem;
+  object-fit: cover;
+}
+footer .WRAPPER .content .section .socials .social.yt {
+  background: url("/public/imgs/youtube.png") center center/cover;
+  width: 2.5rem;
+  border-radius: 5px;
+}
+footer .WRAPPER .content .section .socials .social.ig {
+  background: url("/public/imgs/instagram.png") center center/cover;
+}
+footer .WRAPPER .content .section .socials .social.fb {
+  background: url("/public/imgs/facebook.png") center center/cover;
+  width: 0.9rem;
+}
+footer .WRAPPER .content .section .copyright {
+  opacity: 0.9;
+  font-size: 14px;
+}
+footer .WRAPPER .content .section .header {
+  font-size: clamp(25px, 2vw, 25px);
+  font-weight: 600;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+footer .WRAPPER .content .section .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+footer .WRAPPER .content .section .content .link {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+  font-size: 16px;
+}
+footer .WRAPPER .content .section .content .link a {
+  text-decoration: none;
+  color: white;
+}
+footer .WRAPPER .content .section .content.lessgap {
+  gap: 0px;
+}
+
+@font-face {
+  font-family: "Codan";
+  src: url("/src/fonts/Codan-Light.woff2") format("woff2"), url("/src/fonts/Codan-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Codan";
+  src: url("/src/fonts/Codan-Regular.woff2") format("woff2"), url("/src/fonts/Codan-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Codan";
+  src: url("/src/fonts/Codan-Bold.woff2") format("woff2"), url("/src/fonts/Codan-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+body {
+  font-family: "Codan", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/*# sourceMappingURL=global.css.map */

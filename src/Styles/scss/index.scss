@@ -1,0 +1,43 @@
+/// MAIN SCSS FILE
+
+// IMPORT ALL OTHER PAGES TO MAIN FILES
+@use "partials/navbar";
+@use "partials/homepage";
+@use "partials/footer";
+
+@font-face {
+  font-family: "Codan";
+  src: url("/src/fonts/Codan-Light.woff2") format("woff2"),
+    url("/src/fonts/Codan-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Codan";
+  src: url("/src/fonts/Codan-Regular.woff2") format("woff2"),
+    url("/src/fonts/Codan-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Codan";
+  src: url("/src/fonts/Codan-Bold.woff2") format("woff2"),
+    url("/src/fonts/Codan-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "Codan", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+// https://www.youtube.com/watch?v=GKjVJxOGPuY

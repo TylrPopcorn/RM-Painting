@@ -1,0 +1,36 @@
+/** GLOBAL VARIABLES **/
+
+$backgroundColor: #c4c37a;
+
+$font-header: "Codan", sans-serif;
+
+$lightColor: #fcffb4;
+$buttonColor: #75743c;
+$buttonColor2: #b6b56d;
+$buttonHover: #97976f;
+
+$max-width: 3200px;
+
+@font-face {
+  font-family: "Codan";
+  src: url("../fonts/Codan-Regular.woff2") format("woff2"),
+    url("../fonts/Codan-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Codan";
+  src: url("../fonts/Codan-Bold.woff2") format("woff2"),
+    url("../fonts/Codan-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Codan";
+  src: url("../fonts/Codan-Light.woff2") format("woff2"),
+    url("../fonts/Codan-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}

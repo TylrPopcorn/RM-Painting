@@ -1,0 +1,118 @@
+/** NAVBAR RELATED SCSS **/
+
+//======= VARIABLES
+@use "variables" as vars; //GLOBAL VARIABLES
+
+/** ------ [ NAVBAR ] ------- **/
+nav {
+  background-color: white;
+
+  z-index: 9;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .WRAPPER {
+    height: 100%;
+    width: 100%;
+    max-width: vars.$max-width;
+  }
+
+  .content {
+    padding: 10px 8%;
+    display: flex;
+
+    .navbar-brand {
+      min-width: 100px;
+      height: 60px;
+      padding: 0;
+
+      .logo-img {
+        background: url("/public/imgs/LOGO.png") center center / cover no-repeat;
+
+        width: 200%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        //---LOGO TEST
+        // font-weight: bold;
+        // color: black;
+        // font-size: 30px;
+      }
+    }
+
+    .navbar-toggler {
+      background-color: vars.$buttonColor;
+    }
+
+    .navbar-collapse {
+      gap: 10px;
+
+      @media (max-width: 970px) {
+        padding-top: 20px;
+      }
+
+      .navbar-nav {
+        font-family: vars.$font-header;
+        padding: 5px 10px;
+        width: 100%;
+
+        text-align: center;
+        gap: 20px;
+
+        display: flex;
+        justify-content: flex-end;
+
+        .nav-item {
+          .nav-link {
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 500;
+            color: vars.$buttonColor;
+            text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+
+            &:hover {
+              color: vars.$buttonHover;
+            }
+          }
+        }
+      }
+
+      .socials {
+        padding: 5px 5px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+        .icon {
+          width: 1.5rem;
+          height: 1.5rem;
+
+          &.yt {
+            background: url("/public/imgs/Youtube2.png") center center / contain
+              no-repeat;
+            width: 3rem;
+          }
+
+          &.fb {
+            background: url("/public/imgs/facebook.svg") center center / contain
+              no-repeat;
+          }
+
+          @media (max-width: 990px) {
+            opacity: 0;
+            margin-bottom: -30px;
+          }
+        }
+      }
+    }
+  }
+}

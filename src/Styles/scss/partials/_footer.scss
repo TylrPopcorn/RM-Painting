@@ -1,0 +1,123 @@
+/** FOOTER RELATED SCSS **/
+
+//======= VARIABLES
+@use "variables" as vars; //GLOBAL VARIABLES
+
+/** ------ [ FOOTER ] ------- **/
+footer {
+  padding: 30px;
+  background-color: vars.$buttonColor;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .WRAPPER {
+    padding-top: 20px;
+    height: 100%;
+    width: 100%;
+    max-width: vars.$max-width;
+
+    display: flex;
+    justify-content: center;
+
+    .content {
+      width: 80%;
+      height: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      gap: 20px;
+
+      .section {
+        padding: 10px;
+        min-width: 300px;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 10px;
+
+        font-family: vars.$font-header;
+        color: white;
+
+        &.sctn1 {
+          gap: 20px;
+        }
+
+        .logo {
+          background: url("/public/imgs/LOGO2.png") center center / cover;
+
+          height: 4.5rem;
+          width: 10rem;
+        }
+
+        .socials {
+          display: flex;
+          gap: 15px;
+          padding-left: 5px;
+          .social {
+            height: 1.7rem;
+            width: 1.7rem;
+            object-fit: cover;
+
+            &.yt {
+              background: url("/public/imgs/youtube.png") center center / cover;
+              width: 2.5rem;
+              border-radius: 5px;
+            }
+
+            &.ig {
+              background: url("/public/imgs/instagram.png") center center /
+                cover;
+            }
+
+            &.fb {
+              background: url("/public/imgs/facebook.png") center center / cover;
+              width: 0.9rem;
+            }
+          }
+        }
+
+        .copyright {
+          opacity: 0.9;
+          font-size: 14px;
+        }
+
+        .header {
+          font-size: clamp(25px, 2vw, 25px);
+          font-weight: 600;
+          text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .content {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 10px;
+
+          .link {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            font-size: 16px;
+
+            a {
+              text-decoration: none;
+              color: white;
+            }
+          }
+
+          &.lessgap {
+            gap: 0px;
+          }
+        }
+      }
+    }
+  }
+}

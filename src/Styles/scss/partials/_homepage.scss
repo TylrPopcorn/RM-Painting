@@ -1,0 +1,32 @@
+/** HOMEPAGE RELATED SCSS **/
+
+//======= VARIABLES
+@use "variables" as vars; //GLOBAL VARIABLES
+
+//======= SECTIONS
+@use "./sections/hero";
+@use "./sections/services";
+@use "./sections/aboutUs";
+@use "./sections/materials";
+@use "./sections/gallery";
+@use "./sections/process";
+@use "./sections/craftmanship";
+@use "./sections/mission";
+@use "./sections/cta";
+@use "./sections/contactUs";
+
+/* Keyframes for animation */
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/** ------ [ HOMEPAGE ] ------- **/
+.Homepage {
+}

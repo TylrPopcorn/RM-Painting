@@ -1,0 +1,99 @@
+// MATERIALS SECTION CSS
+
+//======= VARIABLES
+@use "../variables" as vars; //GLOBAL VARIABLES
+
+//Materials
+.Materials-Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .WRAPPER {
+    height: 100%;
+    width: 100%;
+    max-width: vars.$max-width;
+
+    display: flex;
+
+    .img {
+      height: 45rem;
+      width: 50%;
+
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      object-fit: cover;
+      align-items: center;
+
+      background: url("/public/imgs/Materials.png") center center / cover;
+    }
+
+    .content {
+      padding-right: 5%;
+      padding-left: 8%;
+
+      width: 50%;
+
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+
+      font-family: vars.$font-header;
+      color: black;
+
+      .Header {
+        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+
+        width: 80%;
+        max-width: 850px;
+
+        .header-title {
+          font-size: clamp(30px, 4vw, 38px);
+          font-weight: 600;
+
+          .Colored {
+            color: vars.$buttonColor;
+          }
+        }
+
+        .header-sub {
+          color: black;
+          font-size: clamp(16px, 2.5vw, 22px);
+        }
+      }
+
+      .desc {
+        width: 80%;
+        max-width: 850px;
+        font-size: clamp(16px, 2.5vw, 22px);
+        line-height: 1.9;
+        font-weight: 400;
+        opacity: 0.9;
+      }
+    }
+  }
+
+  @media (max-width: 530px) {
+    .WRAPPER {
+      flex-direction: column;
+
+      .img {
+        height: 20rem;
+        width: 100%;
+      }
+
+      .content {
+        padding-top: 40px;
+        width: 100%;
+        height: auto;
+        gap: 0px;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+}

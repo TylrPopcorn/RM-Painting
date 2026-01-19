@@ -1,0 +1,176 @@
+// GALLERY SECTION CSS
+
+//======= VARIABLES
+@use "../variables" as vars; //GLOBAL VARIABLES
+
+//Gallery
+.Gallery-Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  margin-top: -5px;
+
+  .WRAPPER {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    height: 100%;
+    width: 100%;
+    background: url("/public/imgs/background.png") center center / cover;
+    max-width: vars.$max-width;
+
+    display: flex;
+
+    .content {
+      padding-left: 5%;
+      padding-right: 5%;
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: start;
+      text-align: start;
+      gap: 20px;
+
+      font-family: vars.$font-header;
+      color: black;
+
+      .cir {
+        position: absolute;
+        background-color: white;
+        border-radius: 50%;
+        height: 13rem;
+        width: 13rem;
+
+        @media (min-width: 2500px) {
+          opacity: 0;
+        }
+
+        @media (max-width: 1300px) {
+          opacity: 0;
+        }
+
+        &.left {
+          top: 25rem;
+          left: 2rem;
+        }
+
+        &.right {
+          top: 11rem;
+          right: 1.5rem;
+        }
+
+        &.right2 {
+          bottom: 20rem;
+          right: 4rem;
+        }
+
+        &.left2 {
+          bottom: 11rem;
+          left: 4rem;
+        }
+      }
+
+      .Header {
+        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+
+        width: 100%;
+        color: white;
+
+        .header-title {
+          font-size: clamp(30px, 4vw, 38px);
+          font-weight: 600;
+
+          .Colored {
+            color: vars.$buttonColor;
+          }
+        }
+
+        .header-sub {
+          color: black;
+          font-size: clamp(16px, 2.5vw, 22px);
+        }
+
+        @media (max-width: 500px) {
+          text-align: center;
+        }
+      }
+
+      .gallery {
+        width: 100%;
+
+        z-index: 2;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+
+        .img {
+          height: 40vh;
+          max-height: 40rem;
+          min-width: 100px;
+          background-color: green;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.477);
+
+          &.img1 {
+            background: url("/public/imgs/Gallery-1.png") center center / cover;
+          }
+
+          &.img2 {
+            background: url("/public/imgs/Gallery-2.png") center center / cover;
+          }
+
+          &.img3 {
+            background: url("/public/imgs/Gallery-3.png") center center / cover;
+          }
+
+          &.img4 {
+            background: url("/public/imgs/Gallery-4.png") center center / cover;
+          }
+
+          &.img5 {
+            background: url("/public/imgs/Gallery-5.png") center center / cover;
+          }
+
+          &.img6 {
+            background: url("/public/imgs/Gallery-6.png") center center / cover;
+          }
+
+          &.img7 {
+            background: url("/public/imgs/Gallery-7.png") center center / cover;
+          }
+
+          &.img8 {
+            background: url("/public/imgs/Gallery-8.png") center center / cover;
+          }
+
+          &.img9 {
+            background: url("/public/imgs/Gallery-9.png") center center / cover;
+          }
+        }
+
+        @media (max-width: 1200px) {
+          grid-template-columns: repeat(2, minmax(100px, 1fr));
+
+          .img {
+            max-height: 30rem;
+          }
+        }
+
+        @media (max-width: 800px) {
+          grid-template-columns: repeat(1, minmax(100px, 1fr));
+
+          .img {
+            max-height: 20rem;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 500px) {
+      padding-top: 50px;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+// ABOUT US SECTION CSS
+
+//======= VARIABLES
+@use "../variables" as vars; //GLOBAL VARIABLES
+
+//AboutUs
+.AboutUs-Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .WRAPPER {
+    padding-top: 50px;
+
+    height: 100%;
+    width: 100%;
+    max-width: vars.$max-width;
+
+    display: flex;
+
+    .img {
+      height: 45rem;
+      width: 50%;
+
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      object-fit: cover;
+      align-items: center;
+
+      background: url("/public/imgs/abtUs.png") center center / cover;
+    }
+
+    .content {
+      background-color: vars.$backgroundColor;
+
+      padding-left: 5%;
+      padding-right: 5%;
+      width: 50%;
+      padding: 20px 20px;
+
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+
+      font-family: vars.$font-header;
+      color: white;
+
+      .Header {
+        .header-title {
+          text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+          font-size: clamp(30px, 5vw, 38px);
+          font-weight: 600;
+        }
+
+        .header-sub {
+          color: black;
+          font-size: clamp(16px, 2.5vw, 22px);
+          text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      .desc {
+        width: 80%;
+        max-width: 550px;
+        font-size: clamp(16px, 2.5vw, 22px);
+        line-height: 1.8;
+        font-weight: 400;
+        text-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
+        opacity: 0.9;
+      }
+    }
+  }
+
+  //RESPONSIVENESS
+  @media (max-width: 994px) {
+    .WRAPPER {
+      flex-direction: column;
+
+      .img {
+        height: 20rem;
+        width: 100%;
+      }
+
+      .content {
+        padding-top: 40px;
+        width: 100%;
+        height: auto;
+        gap: 0px;
+      }
+    }
+  }
+}

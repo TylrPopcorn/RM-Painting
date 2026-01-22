@@ -1,0 +1,154 @@
+// CONTACT US SECTION CSS
+
+//======= VARIABLES
+@use "../variables" as vars; //GLOBAL VARIABLES
+
+//ContactUs
+.ContactUs-Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.3rem;
+
+  .WRAPPER {
+    height: 100%;
+    width: 100%;
+    max-width: vars.$max-width;
+
+    display: flex;
+    gap: 0.31rem;
+
+    .img {
+      height: 60rem;
+      width: 50%;
+
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      object-fit: cover;
+      align-items: center;
+
+      background: url("/public/imgs/Contact.png") center center / cover;
+    }
+
+    .content {
+      background-color: vars.$backgroundColor;
+
+      padding-left: 5%;
+      padding-right: 5%;
+      width: 50%;
+      padding: 20px 20px;
+
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+
+      font-family: vars.$font-header;
+      color: white;
+
+      .Header {
+        .header-title {
+          text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+          font-size: clamp(30px, 5vw, 38px);
+          font-weight: 600;
+        }
+
+        .header-sub {
+          color: black;
+          font-size: clamp(16px, 2.3vw, 22px);
+          text-shadow: 0px 1px 15px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: vars.$font-header;
+
+        gap: 15px;
+        padding: 20px;
+        gap: 33px;
+        width: 60%;
+        max-width: 600px;
+
+        .form-row {
+          display: flex;
+          gap: 10px;
+          width: 100%;
+        }
+
+        input {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 8px;
+          border: none;
+          width: 100%;
+          color: black;
+          font-size: clamp(14px, 2vw, 17px);
+          border-radius: 5px;
+        }
+
+        textarea {
+          margin-bottom: 10px;
+          width: 100%;
+          border: none;
+          height: 10rem;
+          padding-left: 8px;
+          font-size: clamp(14px, 2vw, 17px);
+          padding-top: 3px;
+          border-radius: 5px;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+          color: #333;
+          opacity: 0.8;
+        }
+
+        .btn {
+          color: white;
+          font-weight: 500;
+          padding: 10px;
+          font-size: clamp(17px, 2vw, 20px);
+          padding-left: 80px;
+          padding-right: 80px;
+          background-color: vars.$buttonColor;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+
+          &:hover {
+            background-color: vars.$buttonHover;
+          }
+        }
+
+        //RESPONSIVENESS
+        @media (max-width: 600px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  //RESPONSIVENESS
+  @media (max-width: 994px) {
+    .WRAPPER {
+      flex-direction: column;
+
+      .img {
+        height: 20rem;
+        width: 100%;
+      }
+
+      .content {
+        padding-top: 40px;
+        width: 100%;
+        height: auto;
+        gap: 0px;
+      }
+    }
+  }
+}

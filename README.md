@@ -1,7 +1,7 @@
 # RM-Painting
 A sleek, responsive web experience crafted in Figma and built with React, SCSS, Bootstrap, and JavaScript, offering smooth performance, intuitive interactions, and a refined user interface across all devices.
 
-Live: 
+Live: https://rm-painting-sample.onrender.com
 
 <img width="1424" height="1278" alt="image" src="https://github.com/user-attachments/assets/e9624991-4e93-4ca2-8e4e-c1296d1505c2" />
 

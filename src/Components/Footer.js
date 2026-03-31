@@ -15,14 +15,14 @@ export default function Footer() {
             <div className="logo"></div>
             <div className="socials">
               <a
-                href="https://www.youtube.com/@rmpaintingconstructionservice?utm_source=facebook&utm_medium=confirmed_link_feature&themeRefresh=1"
+                href=""
                 aria-label="Youtube"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social yt"
               ></a>
               <a
-                href="https://www.facebook.com/people/RM-Painting-Construction-Service/61556730664367/"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -61,13 +61,13 @@ export default function Footer() {
             <div className="content lessgap">
               <p className="link">
                 {" "}
-                <a href="tel:">(903) 239-2108</a>
+                <a>(XXX) XXX-XXXX</a>
               </p>
               <p className="link">
-                <a href="mailto:">Email</a>
+                <a>Email@example.com</a>
               </p>
               <p className="link">
-                491 FM555, Gilmer, TX, United States, Texas
+                Gilmer, TX, United States, Texas
               </p>
             </div>
           </div>

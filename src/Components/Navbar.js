@@ -44,14 +44,14 @@ export default function Navbar() {
           </ul>
           <div className="socials">
             <a
-              href="https://www.facebook.com/people/RM-Painting-Construction-Service/61556730664367/"
+              href=""
               rel="noopener noreferrer"
               className="icon fb"
               aria-label="Facebook"
             ></a>
             <a
               className="icon yt"
-              href="https://www.youtube.com/@rmpaintingconstructionservice?utm_source=facebook&utm_medium=confirmed_link_feature&themeRefresh=1"
+              href=""
               rel="noopener noreferrer"
               aria-label="Youtube"
             ></a>

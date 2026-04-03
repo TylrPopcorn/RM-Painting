@@ -25,13 +25,13 @@ export default function ContactUs() {
           <form
             className="contact-form"
             method="POST"
-            action="https://formsubmit.co/your@email.com"
+            action=""
           >
             <input type="hidden" name="_captcha" value="false" />
             <input
               type="hidden"
               name="_next"
-              value="https://yourdomain.com/thank-you"
+              value=""
             />
 
             <div className="form-row">
